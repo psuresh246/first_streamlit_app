@@ -1,6 +1,6 @@
 import streamlit;
-streamlit.title('first streamlit app');
-streamlit.header('Diner menu');
-streamlit.text('1. chicken burger');
-streamlit.text('2. cheese burger');
-streamlit.text('3. 6" sub');
+streamlit.title('Diner app');
+streamlit.header('Breakfast Menu')
+streamlit.text('Omega 3 & Blueberry Oatmeal')
+streamlit.text('Kale, Spinach & Rocket Smoothie')
+streamlit.text('Hard-Boiled Free-Range Egg')
