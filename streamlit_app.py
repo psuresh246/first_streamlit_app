@@ -21,4 +21,7 @@ streamlit.dataframe(my_fruit_list);
 streamlit.dataframe(fruit_toshow);
 
 fruityvice_response=requests.get('https://fruityvice.com/api/fruit/watermelon');
-streamlit.text(fruityvice_response);
+# using pandas to normalise the json data from prev. requests.get api response.
+fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+# build a datatable using dataframe.
+streamlit.dataframe(fruityvice_normalized);
