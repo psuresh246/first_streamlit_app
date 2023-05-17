@@ -1,5 +1,6 @@
 import streamlit;
 import pandas;
+import requests;
 
 streamlit.title('Diner app');
 streamlit.header('Breakfast Menu');
@@ -18,3 +19,6 @@ streamlit.dataframe(my_fruit_list);
 
 # display selected fruit
 streamlit.dataframe(fruit_toshow);
+
+fruityvice_response=requests.get('https://fruityvice.com/api/fruit/watermelon');
+streamlit.text(fruityvice_response0;
