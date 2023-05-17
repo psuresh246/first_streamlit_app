@@ -21,4 +21,4 @@ streamlit.dataframe(my_fruit_list);
 streamlit.dataframe(fruit_toshow);
 
 fruityvice_response=requests.get('https://fruityvice.com/api/fruit/watermelon');
-streamlit.text(fruityvice_response0;
+streamlit.text(fruityvice_response);
