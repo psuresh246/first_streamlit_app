@@ -39,7 +39,7 @@ try:
     # use function get_fruityvice_data to get data
     fv_data = get_fruityvice_data(fruit_choice);
     # build a datatable using dataframe.
-    streamlit.dataframe(fruityvice_normalized);
+    streamlit.dataframe(fv_data);
 
 except URLError as e:
    streamlit.error();
