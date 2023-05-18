@@ -1,7 +1,7 @@
 import streamlit;
 import pandas;
 import requests;
-import snowflake.connector;
+
 
 streamlit.title('Diner app');
 streamlit.header('Breakfast Menu');
@@ -27,7 +27,9 @@ fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # build a datatable using dataframe.
 streamlit.dataframe(fruityvice_normalized);
 
+streamlit.stop();
 #snowflake connector
+import snowflake.connector;
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("select * From PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST")
