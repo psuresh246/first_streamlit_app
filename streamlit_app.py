@@ -37,3 +37,4 @@ streamlit.dataframe(my_data_rows);
 
 # allow user to add a new fruit to list.
 fruit_added = streamlit.text_input("Add new fruit:");
+streamlit.text("Fruit Entered:"+fruit_added);
