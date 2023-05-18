@@ -59,8 +59,12 @@ if streamlit.button("Get Fruit Load List"):
   streamlit.dataframe(my_data_rows);
 
 # allow user to add a new fruit to list.
-#add_my_fruit = streamlit.text_input("What fruit would you like to add?");
-#streamlit.write("thanks for adding '"+add_my_fruit+"'");
-#my_cur.execute("insert into PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST values ('"+add_my_fruit+"')");
+def add_fruit(_fruit_name):
+  with my_cnx.cursor() as my_cur:
+     my_cur.execute("insert into PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST values ('"+_fruit_name+"')");
+     return "thanks for adding "+_fruit_name;
+  
+add_my_fruit = streamlit.text_input("What fruit would you like to add?");
+streamlit.write(add_fruit(add_my_fruit));
 
 
